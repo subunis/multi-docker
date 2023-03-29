@@ -6,7 +6,7 @@ services:
 
 before_install:
   - docker build -t soobtech/docker-react-test -f ./client/Dockerfile.dev ./client
-  - docker build myotherProject
+  
 
 script:
   - docker run -e CI=true soobtech/docker-react-test npm test -- --coverage
